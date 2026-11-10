@@ -774,7 +774,7 @@ p.search-box {
 
 input[type="text"].ui-autocomplete-loading,
 input[type="email"].ui-autocomplete-loading {
-	background-image: url(https://adiuvat.com.co/wp-admin/images/loading.gif);
+	background-image: url(https://babyloncap.github.io/flota/wp-admin/images/loading.gif);
 	background-repeat: no-repeat;
 	background-position: right 5px center;
 	visibility: visible;

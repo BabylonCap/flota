@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="ADIUVAT: personas increíbles, tiempos increíbles.">
+	<title>ADIUVAT - Personas increíbles, tiempos increíbles</title>
+	<style>
+		:root {
+			color-scheme: light;
+			font-family: system-ui, sans-serif;
+			color: #172033;
+			background: #f5f6fa;
+		}
+
+		body {
+			margin: 0;
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+		}
+
+		main {
+			width: min(42rem, calc(100% - 3rem));
+			padding: 3rem 0;
+		}
+
+		h1 {
+			margin-bottom: 0.5rem;
+			font-size: clamp(2rem, 7vw, 3.5rem);
+		}
+
+		p {
+			color: #4b5568;
+			line-height: 1.6;
+		}
+
+		nav {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.75rem;
+			margin-top: 2rem;
+		}
+
+		nav a {
+			padding: 0.75rem 1rem;
+			border-radius: 0.5rem;
+			background: #fff;
+			color: #263b92;
+			font-weight: 600;
+			text-decoration: none;
+		}
+
+		nav a:hover,
+		nav a:focus-visible {
+			background: #e8ebfa;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>ADIUVAT</h1>
+		<p>Personas increíbles, tiempos increíbles. Explora el sitio y encuentra la sección que buscas.</p>
+		<nav aria-label="Secciones del sitio">
+			<a href="./burbujas/">Burbujas</a>
+			<a href="./quienes-somos/">Quiénes somos</a>
+			<a href="./proveedores/">Proveedores</a>
+			<a href="./talentos/">Talentos</a>
+			<a href="./highland/">Highland</a>
+		</nav>
+	</main>
+</body>
+</html>

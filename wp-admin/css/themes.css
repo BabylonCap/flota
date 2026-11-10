@@ -1953,7 +1953,7 @@ body.full-overlay-active {
 	z-index: -1;
 	margin: -10px 0 0 -10px;
 	transform: translateZ(0);
-	background: transparent url(https://adiuvat.com.co/wp-admin/images/spinner.gif) no-repeat center center;
+	background: transparent url(https://babyloncap.github.io/flota/wp-admin/images/spinner.gif) no-repeat center center;
 	background-size: 20px 20px;
 }
 
@@ -1971,7 +1971,7 @@ body.full-overlay-active {
 @media print,
   (min-resolution: 120dpi) {
 	.wp-full-overlay .collapse-sidebar-arrow {
-		background-image: url(https://adiuvat.com.co/wp-admin/images/arrows-2x.png);
+		background-image: url(https://babyloncap.github.io/flota/wp-admin/images/arrows-2x.png);
 		background-size: 15px 123px;
 	}
 
@@ -1979,7 +1979,7 @@ body.full-overlay-active {
 	.customize-loading #customize-container:before,
 	#customize-controls .notice.notification-overlay.notification-loading:before,
 	.theme-install-overlay .wp-full-overlay-main:before {
-		background-image: url(https://adiuvat.com.co/wp-admin/images/spinner-2x.gif);
+		background-image: url(https://babyloncap.github.io/flota/wp-admin/images/spinner-2x.gif);
 	}
 }
 

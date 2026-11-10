@@ -573,7 +573,7 @@ div.revisions-controls > .wp-slider > .ui-slider-handle {
 @media print,
   (min-resolution: 120dpi) {
 	.revision-tick.completed-false {
-		background-image: url(https://adiuvat.com.co/wp-admin/images/spinner-2x.gif);
+		background-image: url(https://babyloncap.github.io/flota/wp-admin/images/spinner-2x.gif);
 	}
 }
 

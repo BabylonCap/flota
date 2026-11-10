@@ -362,14 +362,14 @@ form#tags-filter {
 }
 
 #content-resize-handle {
-	background: transparent url(https://adiuvat.com.co/wp-admin/images/resize.gif) no-repeat scroll left bottom;
+	background: transparent url(https://babyloncap.github.io/flota/wp-admin/images/resize.gif) no-repeat scroll left bottom;
 	width: 12px;
 	cursor: row-resize;
 }
 
 /*rtl:ignore*/
 .rtl #content-resize-handle {
-	background-image: url(https://adiuvat.com.co/wp-admin/images/resize-rtl.gif);
+	background-image: url(https://babyloncap.github.io/flota/wp-admin/images/resize-rtl.gif);
 	background-position: left bottom;
 }
 
@@ -1728,14 +1728,14 @@ table.links-table {
   (min-resolution: 120dpi) {
 	#content-resize-handle,
 	#post-body .wp_themeSkin .mceStatusbar a.mceResize {
-		background: transparent url(https://adiuvat.com.co/wp-admin/images/resize-2x.gif) no-repeat scroll left bottom;
+		background: transparent url(https://babyloncap.github.io/flota/wp-admin/images/resize-2x.gif) no-repeat scroll left bottom;
 		background-size: 11px 11px;
 	}
 
 	/*rtl:ignore*/
 	.rtl #content-resize-handle,
 	.rtl #post-body .wp_themeSkin .mceStatusbar a.mceResize {
-		background-image: url(https://adiuvat.com.co/wp-admin/images/resize-rtl-2x.gif);
+		background-image: url(https://babyloncap.github.io/flota/wp-admin/images/resize-rtl-2x.gif);
 		background-position: left bottom;
 	}
 }

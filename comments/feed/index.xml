@@ -8,8 +8,8 @@
 <channel>
 	<title>
 	Comentarios para Personas increíbles, tiempos increíbles	</title>
-	<atom:link href="https://adiuvat.com.co/comments/feed/" rel="self" type="application/rss+xml" />
-	<link>https://adiuvat.com.co/</link>
+	<atom:link href="https://babyloncap.github.io/flota/comments/feed/" rel="self" type="application/rss+xml" />
+	<link>https://babyloncap.github.io/flota/</link>
 	<description>¿Saldrás este fin de semana?. Encuentra plan y participa en experiencias agradables a poco costo cerca de ti. Sal con tu familia, amigos o pareja. Join us</description>
 	<lastBuildDate>Wed, 17 Sep 2025 23:59:09 +0000</lastBuildDate>
 	<sy:updatePeriod>
@@ -20,11 +20,11 @@
 	<item>
 		<title>
 		Comentario en Hello world! por A WordPress Commenter		</title>
-		<link>https://adiuvat.com.co/hello-world/#comment-1</link>
+		<link>https://babyloncap.github.io/flota/hello-world/#comment-1</link>
 
 		<dc:creator><![CDATA[A WordPress Commenter]]></dc:creator>
 		<pubDate>Wed, 17 Sep 2025 23:53:05 +0000</pubDate>
-		<guid isPermaLink="false">https://adiuvat.com.co/?p=1#comment-1</guid>
+		<guid isPermaLink="false">https://babyloncap.github.io/flota/?p=1#comment-1</guid>
 
 					<description><![CDATA[Hi, this is a comment.
 To get started with moderating, editing, and deleting comments, please visit the Comments screen in the dashboard.

@@ -944,7 +944,7 @@ border color while dragging a file over the uploader drop area */
 	right: 50%;
 	top: 50%;
 	margin: -10px -10px 0 0;
-	background: transparent url(https://adiuvat.com.co/wp-admin/images/spinner.gif) no-repeat center;
+	background: transparent url(https://babyloncap.github.io/flota/wp-admin/images/spinner.gif) no-repeat center;
 	background-size: 20px 20px;
 	transform: translateZ(0);
 }
@@ -1265,7 +1265,7 @@ audio, video {
 @media print,
   (min-resolution: 120dpi) {
 	.imgedit-wait:before {
-		background-image: url(https://adiuvat.com.co/wp-admin/images/spinner-2x.gif);
+		background-image: url(https://babyloncap.github.io/flota/wp-admin/images/spinner-2x.gif);
 	}
 }
 
