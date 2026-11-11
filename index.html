@@ -71,6 +71,71 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta name="generator" content="WordPress 7.1.4">
 <link rel="canonical" href="https://babyloncap.github.io/flota/">
 <link rel="shortlink" href="https://babyloncap.github.io/flota/">
+<style id="global-header-fixes-css">
+	html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+	.elementor .e-container_a95ranwsv-b2bd907 { box-sizing: border-box; transition: transform .25s ease; will-change: transform; }
+	.elementor .e-container_a95ranwsv-b2bd907.is-hidden { transform: translateY(-100%); }
+	.elementor .header-menu-item { position: relative; }
+	.elementor .header-menu-toggle { display: inline-flex; align-items: center; gap: .5rem; border: 0; padding: 0; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+	.elementor .header-menu-toggle .elementor-icon-list-icon { display: inline-flex; }
+	.elementor .header-menu-toggle .elementor-icon-list-icon svg { width: .65em; height: .65em; transition: transform .2s ease; }
+	.elementor .menu-has-submenu.is-open > .header-menu-toggle .elementor-icon-list-icon svg { transform: rotate(180deg); }
+	.header-submenu { display: none; position: absolute; top: 100%; left: 0; z-index: 2; min-width: 230px; margin: .5rem 0 0; padding: .5rem 0; list-style: none; background: #fff; box-shadow: 0 8px 24px rgba(28, 36, 75, .16); }
+	.elementor .menu-has-submenu:hover > .header-submenu,
+	.elementor .menu-has-submenu:focus-within > .header-submenu,
+	.elementor .menu-has-submenu.is-open > .header-submenu { display: block; }
+	.header-submenu a { display: block; padding: .65rem 1rem; color: #1c244b; text-decoration: none; }
+	.header-submenu a:hover,
+	.header-submenu a:focus-visible { background: #f3f5f8; }
+	.mobile-menu-overlay,
+	.mobile-navigation { display: none; }
+	.mobile-menu-overlay[hidden],
+	.mobile-navigation[hidden] { display: none !important; }
+	.mobile-navigation-close,
+	.mobile-menu-toggle { border: 0; background: transparent !important; color: #1c244b; cursor: pointer; }
+	.elementor .mobile-menu-toggle { display: none; }
+	.mobile-navigation-close { display: block; margin: 0 0 1.5rem auto; padding: .4rem; font-size: 1.75rem; line-height: 1; }
+	.mobile-navigation .mobile-navigation-close { color: #1c244b !important; }
+	.mobile-navigation nav > div > ul.elementor-icon-list-items { display: flex !important; flex-direction: column; align-items: stretch; gap: .25rem; margin: 0; padding: 0; list-style: none; }
+	.mobile-navigation nav > div > ul > li { display: block; padding: .2rem 0; }
+	.mobile-navigation nav > div > ul > li.elementor-inline-item { margin: 0; }
+	.mobile-navigation nav > div > ul > li > a,
+	.mobile-navigation .header-menu-toggle { display: flex; width: 100%; align-items: center; justify-content: space-between; padding: .75rem .5rem; color: #1c244b; font-size: 1rem; text-align: left; text-decoration: none; }
+	.mobile-navigation .elementor-icon-list-icon { display: none !important; }
+	.mobile-navigation .header-menu-toggle .elementor-icon-list-icon { display: inline-flex !important; }
+	.mobile-navigation .header-menu-toggle .elementor-icon-list-icon svg { width: .65em; height: .65em; }
+	.mobile-navigation .elementor-icon-list-text { flex: 1; }
+	.mobile-navigation .header-menu-toggle { border: 0; background: transparent; color: #1c244b; font: inherit; cursor: pointer; }
+	.mobile-navigation .header-submenu { position: static; min-width: 0; margin: 0; padding: 0 0 .25rem 1rem; background: transparent; box-shadow: none; }
+	.mobile-navigation .header-submenu a { padding: .65rem .5rem; }
+	.mobile-navigation .menu-has-submenu.is-open > .header-submenu { display: block; }
+	.mobile-navigation-close:focus-visible,
+	.mobile-menu-toggle:focus-visible,
+	.elementor .header-menu-toggle:focus-visible,
+	.mobile-navigation .header-menu-toggle:focus-visible,
+	.mobile-navigation a:focus-visible { outline: 2px solid #467ff7; outline-offset: 3px; }
+	body.mobile-menu-open { overflow: hidden; }
+	@media (max-width: 767px) {
+		.elementor .e-container_a95ranwsv-b2bd907 { min-height: 64px; padding: .75rem 1rem; }
+		.elementor .e-container_obizzf88w-e8f3b15 { width: 60%; }
+		.elementor .e-widget_t5y4rtrx7-8d2fc3d { height: 40px; }
+		.elementor .e-container_18hci7axg-48fcf4a { width: auto; flex-direction: row; align-items: center; justify-content: flex-end; }
+		.elementor .e-container_6h9cbmr4y-99deea1 { display: none !important; }
+		.elementor .e-container_af97zieg2-08d42ea { display: flex; width: auto; height: auto; overflow: visible; opacity: 1; }
+		.elementor .e-container_skb90szm1-f404d23 { display: none; }
+		.elementor .e-container_af97zieg2-08d42ea .elementor-icon-wrapper { display: flex; }
+		.elementor .mobile-menu-toggle { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: .5rem; }
+		.elementor .mobile-menu-toggle svg { width: 24px; height: 24px; }
+		.mobile-menu-overlay { display: block; position: fixed; inset: 0; z-index: 1098; background: rgba(15, 23, 42, .5); }
+		.mobile-navigation { display: block; position: fixed; inset: 0 0 0 auto; z-index: 1099; width: min(86vw, 380px); box-sizing: border-box; overflow-y: auto; padding: 1.25rem 1.5rem 2rem; background: #fff; box-shadow: -8px 0 28px rgba(15, 23, 42, .18); transform: translateX(105%); transition: transform .25s ease; }
+		.mobile-navigation.is-open { transform: translateX(0); }
+	}
+	@media (prefers-reduced-motion: reduce) {
+		html { scroll-behavior: auto; }
+		.elementor .e-container_a95ranwsv-b2bd907,
+		.mobile-navigation { transition: none; }
+	}
+</style>
 </head>
 <body class="home wp-singular page-template page-template-elementor_header_footer page page-id-35 wp-embed-responsive wp-theme-hello-elementor angie-default hello-elementor-default elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-35">
 
@@ -95,7 +160,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 							<div class="elementor-background-video-embed" role="presentation"></div>
 						</div>		<div class="elementor-element elementor-element-4a0fd027 elementor-widget elementor-widget-heading" data-id="4a0fd027" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h1 class="elementor-heading-title elementor-size-default">El tour con Danny<br></h1>				</div>
+					<h1 id="inicio" class="elementor-heading-title elementor-size-default">El tour con Danny<br></h1>				</div>
 				</div>
 				<div class="elementor-element elementor-element-505bff5e elementor-widget elementor-widget-heading" data-id="505bff5e" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -155,7 +220,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		<div class="elementor-element elementor-element-a0f57ec e-con-full e-flex e-con e-parent" data-id="a0f57ec" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-49b32ff7 elementor-widget elementor-widget-heading" data-id="49b32ff7" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">últimos trayectos</h2>				</div>
+					<h2 id="trayectos" class="elementor-heading-title elementor-size-default">últimos trayectos</h2>				</div>
 				</div>
 				<div class="elementor-element elementor-element-825c12f elementor-widget elementor-widget-heading" data-id="825c12f" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -193,7 +258,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		<div class="elementor-element elementor-element-294cc845 e-con-full e-flex e-con e-parent" data-id="294cc845" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 				<div class="elementor-element elementor-element-5358ca67 elementor-widget elementor-widget-heading" data-id="5358ca67" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Dónde y cómo trabajamos</h2>				</div>
+					<h2 id="ubicacion" class="elementor-heading-title elementor-size-default">Dónde y cómo trabajamos</h2>				</div>
 				</div>
 				<div class="elementor-element elementor-element-595c7150 elementor-widget elementor-widget-heading" data-id="595c7150" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -214,7 +279,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		<div class="elementor-element elementor-element-10ab63b e-con-full e-flex e-con e-parent" data-id="10ab63b" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-7a079370 elementor-widget elementor-widget-heading" data-id="7a079370" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Referencias reales</h2>				</div>
+					<h2 id="referencias" class="elementor-heading-title elementor-size-default">Referencias reales</h2>				</div>
 				</div>
 		<div class="elementor-element elementor-element-15da63c3 e-con-full e-flex e-con e-child" data-id="15da63c3" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-5a8649bb elementor-widget elementor-widget-testimonial" data-id="5a8649bb" data-element_type="widget" data-e-type="widget" data-widget_type="testimonial.default">
@@ -385,6 +450,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 </header>
 		</div>
+<div class="mobile-menu-overlay" data-mobile-menu-overlay hidden></div>
+<aside id="mobile-navigation" class="mobile-navigation" aria-label="Navegación móvil" aria-hidden="true" inert hidden>
+	<button class="mobile-navigation-close" type="button" aria-label="Cerrar menú">&times;</button>
+	<nav aria-label="Navegación principal">
+		<div id="mobile-navigation-list"></div>
+	</nav>
+</aside>
 		<footer id="site-footer" class="site-footer dynamic-footer footer-stacked footer-full-width footer-has-copyright">
 	<div class="footer-inner">
 		<div class="site-branding show-logo">
@@ -437,6 +509,192 @@ var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/babyloncap.github.io\/flo
 /*! This file is auto-generated */
 var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
 //# sourceURL=https://babyloncap.github.io/flota/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+<script id="global-header-interactions">
+(() => {
+	const header = document.querySelector('.e-container_a95ranwsv-b2bd907');
+	const mainMenu = header?.querySelector('.elementor-element-widget_icgat3f5w ul');
+	const drawer = document.querySelector('#mobile-navigation');
+	const overlay = document.querySelector('[data-mobile-menu-overlay]');
+	const mobileMenu = document.querySelector('#mobile-navigation-list');
+	const menuQuery = window.matchMedia('(max-width: 767px)');
+
+	if (!header || !mainMenu || !drawer || !overlay || !mobileMenu) return;
+
+	const menuButton = header.querySelector('.e-container_af97zieg2-08d42ea a.elementor-icon');
+	const closeButton = drawer.querySelector('.mobile-navigation-close');
+	const homeLink = header.querySelector('.e-image-link-base');
+
+	if (homeLink) homeLink.href = '#inicio';
+
+	mainMenu.querySelectorAll('li').forEach((item) => {
+		const link = item.querySelector(':scope > a');
+		const label = item.querySelector('.elementor-icon-list-text')?.textContent.trim().toLowerCase();
+
+		if (!link || !label) return;
+
+		if (label === 'inicio') {
+			link.href = '#inicio';
+		} else if (label === 'contacto') {
+			link.href = 'https://babyloncap.github.io/flota/contact/';
+		} else if (label === 'servicios') {
+			const toggle = document.createElement('button');
+			toggle.type = 'button';
+			toggle.className = 'header-menu-toggle';
+			toggle.setAttribute('aria-haspopup', 'true');
+			toggle.setAttribute('aria-expanded', 'false');
+			toggle.innerHTML = link.innerHTML;
+			link.replaceWith(toggle);
+			item.classList.add('menu-has-submenu');
+
+			const submenu = document.createElement('ul');
+			submenu.className = 'header-submenu';
+			[
+				['Últimos trayectos', '#trayectos'],
+				['Dónde y cómo trabajamos', '#ubicacion'],
+				['Referencias reales', '#referencias'],
+			].forEach(([text, href]) => {
+				const subItem = document.createElement('li');
+				const subLink = document.createElement('a');
+				subLink.href = href;
+				subLink.textContent = text;
+				subItem.append(subLink);
+				submenu.append(subItem);
+			});
+			item.append(submenu);
+		}
+	});
+
+	mobileMenu.replaceChildren(mainMenu.cloneNode(true));
+	drawer.inert = true;
+	document.body.append(overlay, drawer);
+
+	if (menuButton) {
+		const button = document.createElement('button');
+		button.type = 'button';
+		button.className = `${menuButton.className} mobile-menu-toggle`;
+		button.setAttribute('aria-label', 'Abrir menú');
+		button.setAttribute('aria-controls', 'mobile-navigation');
+		button.setAttribute('aria-expanded', 'false');
+		button.innerHTML = menuButton.innerHTML;
+		menuButton.replaceWith(button);
+	}
+
+	const drawerToggle = header.querySelector('.mobile-menu-toggle');
+
+	function closeSubmenus() {
+		document.querySelectorAll('.menu-has-submenu.is-open').forEach((item) => {
+			item.classList.remove('is-open');
+			item.querySelector('.header-menu-toggle')?.setAttribute('aria-expanded', 'false');
+		});
+	}
+
+	function setDrawerOpen(open, restoreFocus = true) {
+		drawer.hidden = !open;
+		overlay.hidden = !open;
+		drawer.classList.toggle('is-open', open);
+		drawer.setAttribute('aria-hidden', String(!open));
+		drawer.inert = !open;
+		document.body.classList.toggle('mobile-menu-open', open);
+		drawerToggle?.setAttribute('aria-expanded', String(open));
+		drawerToggle?.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+
+		if (open) {
+			requestAnimationFrame(() => closeButton?.focus());
+		} else {
+			closeSubmenus();
+			if (restoreFocus) drawerToggle?.focus();
+		}
+	}
+
+	document.addEventListener('click', (event) => {
+		const target = event.target instanceof Element ? event.target : null;
+		if (!target) return;
+
+		const submenuToggle = target.closest('.header-menu-toggle');
+		if (submenuToggle) {
+			event.preventDefault();
+			const item = submenuToggle.closest('.menu-has-submenu');
+			const open = !item.classList.contains('is-open');
+			closeSubmenus();
+			item.classList.toggle('is-open', open);
+			submenuToggle.setAttribute('aria-expanded', String(open));
+			return;
+		}
+
+		if (target.closest('.mobile-menu-toggle')) {
+			event.preventDefault();
+			if (menuQuery.matches) setDrawerOpen(true);
+			return;
+		}
+
+		if (target.closest('.mobile-navigation-close') || target === overlay) {
+			setDrawerOpen(false);
+			return;
+		}
+
+		if (target.closest('.mobile-navigation a')) {
+			setDrawerOpen(false, false);
+			return;
+		}
+
+		if (!target.closest('.menu-has-submenu')) closeSubmenus();
+	});
+
+	document.addEventListener('keydown', (event) => {
+		if (event.key === 'Escape') {
+			if (!drawer.hidden) {
+				setDrawerOpen(false);
+			} else {
+				closeSubmenus();
+			}
+		}
+
+		if (event.key === 'Tab' && !drawer.hidden) {
+			const focusable = [...drawer.querySelectorAll('a[href], button:not([disabled])')]
+				.filter((element) => element.getClientRects().length > 0);
+			const first = focusable[0];
+			const last = focusable[focusable.length - 1];
+
+			if (event.shiftKey && document.activeElement === first) {
+				event.preventDefault();
+				last?.focus();
+			} else if (!event.shiftKey && document.activeElement === last) {
+				event.preventDefault();
+				first?.focus();
+			}
+		}
+	});
+
+	const closeOnDesktop = (event) => {
+		if (!event.matches) return;
+		setDrawerOpen(false, false);
+	};
+	if (menuQuery.addEventListener) menuQuery.addEventListener('change', closeOnDesktop);
+	else menuQuery.addListener(closeOnDesktop);
+
+	let previousScrollY = window.scrollY;
+	let scrollScheduled = false;
+	window.addEventListener('scroll', () => {
+		if (scrollScheduled) return;
+		scrollScheduled = true;
+		window.requestAnimationFrame(() => {
+			const currentScrollY = window.scrollY;
+			if (drawer.hidden) {
+				if (currentScrollY < 40 || currentScrollY < previousScrollY - 5) {
+					header.classList.remove('is-hidden');
+				} else if (currentScrollY > 120 && currentScrollY > previousScrollY + 5) {
+					header.classList.add('is-hidden');
+				}
+			} else {
+				header.classList.remove('is-hidden');
+			}
+			previousScrollY = currentScrollY;
+			scrollScheduled = false;
+		});
+	}, { passive: true });
+})();
 </script>
 
 </body>
