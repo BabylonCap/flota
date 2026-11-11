@@ -1,0 +1,151 @@
+#site-header.site-header {
+	background: #fff;
+	border-bottom: 1px solid #e8edf4;
+	box-shadow: 0 4px 18px rgba(28, 36, 75, 0.06);
+	padding: 0 clamp(16px, 5vw, 72px);
+	position: relative;
+	z-index: 20;
+}
+
+#site-header .header-inner {
+	align-items: center;
+	display: flex;
+	gap: 32px;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 1200px;
+	min-height: 96px;
+	width: 100%;
+}
+
+#site-header .site-branding {
+	align-items: center;
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: row;
+	gap: 16px;
+	min-width: 0;
+}
+
+#site-header .brand-mark {
+	display: block;
+	flex: 0 0 auto;
+	line-height: 0;
+}
+
+#site-header .brand-mark img {
+	display: block;
+	height: auto;
+	max-height: 76px;
+	object-fit: contain;
+	width: 114px;
+}
+
+#site-header .brand-description {
+	color: #1c244b;
+	font-family: Poppins, sans-serif;
+	font-size: clamp(18px, 2vw, 23px);
+	font-weight: 600;
+	line-height: 1.2;
+	white-space: nowrap;
+}
+
+#site-header .site-navigation {
+	align-items: center;
+	display: flex !important;
+	flex: 0 1 auto;
+	justify-content: flex-end;
+}
+
+#site-header .header-menu {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#site-header .header-menu a {
+	border-radius: 999px;
+	color: #1c244b;
+	display: inline-flex;
+	font-family: Poppins, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.2;
+	padding: 11px 13px;
+	text-decoration: none;
+	transition: background-color 160ms ease, color 160ms ease;
+}
+
+#site-header .header-menu a:hover,
+#site-header .header-menu a:focus-visible {
+	background: #edf3ff;
+	color: #315fbd;
+}
+
+#site-header .header-menu .social-link a {
+	color: #315fbd;
+	font-weight: 600;
+}
+
+#site-header .header-menu a:focus-visible {
+	outline: 2px solid #467ff7;
+	outline-offset: 2px;
+}
+
+@media (max-width: 760px) {
+	#site-header .header-inner {
+		align-items: stretch;
+		flex-direction: column;
+		gap: 10px;
+		padding: 10px 0 12px;
+	}
+
+	#site-header .site-branding {
+		justify-content: center;
+	}
+
+	#site-header .brand-mark img {
+		max-height: 62px;
+		width: 94px;
+	}
+
+	#site-header .site-navigation {
+		justify-content: center;
+		width: 100%;
+	}
+
+	#site-header .header-menu {
+		gap: 0;
+		justify-content: center;
+		width: 100%;
+	}
+
+	#site-header .header-menu a {
+		font-size: 12px;
+		padding: 8px 3px;
+	}
+}
+
+@media (max-width: 360px) {
+	#site-header.site-header {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	#site-header .site-branding {
+		gap: 10px;
+	}
+
+	#site-header .brand-mark img {
+		width: 82px;
+	}
+
+	#site-header .brand-description {
+		font-size: 18px;
+	}
+
+}
