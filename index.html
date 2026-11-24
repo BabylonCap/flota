@@ -186,20 +186,17 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 					
 
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cotizar viaje | Flota Vehicular</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
   <style>
-    :root { --azul:#1250D3; --azul-oscuro:#0B2B68; --borde:#DCE4F2; --texto:#172B4D; --suave:#F4F7FC; }
-    * { box-sizing:border-box; }
-    body { margin:0; padding:24px; background:#fff; color:var(--texto); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
+    .cotizador { --azul:#1250D3; --azul-oscuro:#0B2B68; --borde:#DCE4F2; --texto:#172B4D; --suave:#F4F7FC; }
+    .cotizador, .cotizador * { box-sizing:border-box; }
+    .cotizador { padding:24px; background:#fff; color:var(--texto); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
     .cotizador { width:min(1280px,100%); margin:0 auto; }
     .barra { display:flex; align-items:stretch; min-height:76px; border:2px solid var(--azul); border-radius:17px; overflow:hidden; background:#fff; box-shadow:0 3px 12px rgba(18,80,211,.09); }
     .campo { position:relative; flex:1 1 0; min-width:0; padding:11px 16px 10px; display:flex; flex-direction:column; justify-content:center; gap:3px; border-right:1px solid #E5EAF3; cursor:pointer; }
     .campo:hover { background:#F8FAFF; }
     .campo label { font-size:13px; font-weight:700; color:#61718D; cursor:pointer; }
-    .campo input,.campo select { width:100%; border:0; outline:0; padding:0; background:transparent; color:var(--azul-oscuro); font:600 15px inherit; font-size:15px; min-width:0; }
+    .campo input,.campo select { width:100%; border:0; outline:0; padding:0; background:transparent; color:var(--azul-oscuro); font-family:inherit; font-weight:600; font-size:15px; min-width:0; }
     .campo input::placeholder { color:#66758F; opacity:1; }
     .campo .subtexto { font-size:12px; color:#71809A; }
     .campo.fechas { flex:1.05 1 0; }
@@ -225,9 +222,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     .mensaje.ok { display:block; background:#ECFDF3; border:1px solid #A7E8C0; color:#17633A; }
     .mensaje.error { display:block; background:#FFF3F1; border:1px solid #FFC6BD; color:#8B2E21; }
     .nota { margin:10px 4px 0; color:#74819A; font-size:12px; }
+    .contacto { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px; }
+    .contacto input { width:100%; border:1px solid var(--borde); border-radius:11px; padding:13px 14px; font:inherit; color:var(--azul-oscuro); }
+    .consentimiento { display:flex; gap:8px; align-items:flex-start; margin-top:10px; font-size:13px; color:#40516D; }
+    @media (max-width:850px) { .contacto { grid-template-columns:1fr; } }
     .solo-lector { color:#52627D; font-size:13px; }
     @media (max-width:850px) {
-      body { padding:16px; }
+      .cotizador { padding:16px; }
       .barra { display:grid; grid-template-columns:1fr 1fr; overflow:visible; gap:0; border-radius:15px; }
       .campo { min-height:72px; border-bottom:1px solid #E5EAF3; }
       .campo:nth-child(2) { border-right:0; }
@@ -236,7 +237,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       .acciones { grid-column:1 / -1; min-height:56px; border-radius:0 0 12px 12px; }
     }
     @media (max-width:520px) {
-      body { padding:10px; }
+      .cotizador { padding:10px; }
       .barra { grid-template-columns:1fr; }
       .campo,.campo:nth-child(2) { border-right:0; border-bottom:1px solid #E5EAF3; min-height:65px; }
       .campo.pasajeros { margin:5px; }
@@ -245,27 +246,25 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       .detalles { align-items:flex-start; flex-direction:column; gap:12px; }
     }
   </style>
-
-
   <main class="cotizador">
     <form id="formCotizacion">
       <div class="barra">
         <div class="campo" id="campoOrigen" role="button" tabindex="0" aria-label="Seleccionar lugar de salida">
           <label for="origen">Desde</label>
-          <input id="origen" name="origen" placeholder="Ciudad o lugar" autocomplete="off" required>
+          <input id="origen" name="origen" placeholder="Ciudad o lugar" autocomplete="off" required />
           <span class="subtexto">Selecciona el punto de salida</span>
         </div>
         <div class="campo" id="campoDestino" role="button" tabindex="0" aria-label="Seleccionar lugar de llegada">
           <label for="destino">Hasta</label>
-          <input id="destino" name="destino" placeholder="Ciudad o lugar" autocomplete="off" required>
+          <input id="destino" name="destino" placeholder="Ciudad o lugar" autocomplete="off" required />
           <span class="subtexto">Selecciona el destino</span>
         </div>
         <div class="campo fechas">
           <label for="fechaSalida">Salida</label>
-          <input id="fechaSalida" name="fecha_salida" type="date" required>
+          <input id="fechaSalida" name="fecha_salida" type="date" required />
           <div class="fecha-regreso" id="bloqueRegreso">
             <label for="fechaRegreso" style="display:block;margin-top:7px">Regreso</label>
-            <input id="fechaRegreso" name="fecha_regreso" type="date">
+            <input id="fechaRegreso" name="fecha_regreso" type="date" />
           </div>
         </div>
         <div class="campo pasajeros">
@@ -309,22 +308,35 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       </section>
 
       <div class="detalles">
-        <label><input type="checkbox" id="tieneRegreso"> Necesito viaje de regreso en otra fecha</label>
-        <label><input type="checkbox" id="reservarEspacio" name="reservar_espacio" value="Sí"> Deseo reservar el espacio</label>
+        <label><input type="checkbox" id="tieneRegreso" /> Necesito viaje de regreso en otra fecha</label>
+        <label><input type="checkbox" id="reservarEspacio" name="reservar_espacio" value="Sí" /> Deseo reservar el espacio</label>
         <span class="solo-lector" id="distanciaResumen">Distancia por carretera: pendiente de calcular</span>
       </div>
+      <div class="contacto">
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" aria-label="Nombre completo" autocomplete="name" required />
+        <input type="tel" id="telefono" name="telefono" placeholder="Celular / WhatsApp" aria-label="Celular o WhatsApp" autocomplete="tel" inputmode="tel" pattern="\+?[0-9\s]{7,15}" required />
+        <input type="email" id="email" name="email" placeholder="Correo (opcional)" aria-label="Correo electrónico" autocomplete="email" />
+      </div>
+      <label class="consentimiento"><input type="checkbox" name="autoriza_datos" value="Sí" required /> Autorizo el tratamiento de mis datos personales para gestionar esta cotización (Ley 1581 de 2012).</label>
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
       <div id="mensaje" class="mensaje" role="status" aria-live="polite"></div>
       <p class="nota">Al cotizar, enviaremos tu solicitud al equipo de Flota Vehicular. Recibirás respuesta en máximo 1 hora.</p>
-      <input type="hidden" id="distanciaKm" name="distancia_km">
-      <input type="hidden" id="duracionRuta" name="duracion_estimada">
-      <input type="hidden" id="coordenadasOrigen" name="coordenadas_salida">
-      <input type="hidden" id="coordenadasDestino" name="coordenadas_llegada">
+      <input type="hidden" id="distanciaKm" name="distancia_km" />
+      <input type="hidden" id="duracionRuta" name="duracion_estimada" />
+      <input type="hidden" id="coordenadasOrigen" name="coordenadas_salida" />
+      <input type="hidden" id="coordenadasDestino" name="coordenadas_llegada" />
     </form>
   </main>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script>
+(function () {
     const $ = (id) => document.getElementById(id);
+    // ===== CONFIGURACIÓN =====
+    const soporteEmail = 'supportadiuvat@gmail.com'; // CONFIRMAR: ¿support o soporte?
+    const WHATSAPP_FLOTA = '';  // Ej: 573001234567 (sin + ni espacios). Vacío = desactivado
+    const WEBHOOK_URL = '';     // Make / n8n / Apps Script para WhatsApp automático (opcional)
+    let pendiente = Promise.resolve();
     const panelMapa = $('panelMapa');
     let mapa, marcadorOrigen, marcadorDestino, lineaRuta;
     let puntoOrigen = null, puntoDestino = null, campoActivo = 'origen';
@@ -338,7 +350,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       if (!mapa) {
         mapa = L.map('mapa').setView([6.2442, -75.5812], 8);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          maxZoom: 19, attribution: '© OpenStreetMap'
+          maxZoom: 19, attribution: '&copy; OpenStreetMap'
         }).addTo(mapa);
         mapa.on('click', async (e) => {
           const punto = { lat: e.latlng.lat, lon: e.latlng.lng };
@@ -387,8 +399,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
         abrirMapa(tipo); mapa.setView([p.lat, p.lon], 13); await asignarPunto(tipo, p, resultados[0].display_name);
       } catch (err) { mostrarMensaje(err.message, 'error'); }
     }
-    $('origen').addEventListener('change', e => buscarLugar('origen', e.target.value));
-    $('destino').addEventListener('change', e => buscarLugar('destino', e.target.value));
+    $('origen').addEventListener('change', e => { pendiente = buscarLugar('origen', e.target.value); });
+    $('destino').addEventListener('change', e => { pendiente = buscarLugar('destino', e.target.value); });
+    $('origen').addEventListener('input', () => { puntoOrigen = null; kmRuta = null; });
+    $('destino').addEventListener('input', () => { puntoDestino = null; kmRuta = null; });
+    ['origen','destino'].forEach(id => $(id).addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); e.target.blur(); } }));
 
     async function calcularRuta() {
       $('rutaInfo').textContent = 'Calculando la ruta en automóvil…';
@@ -403,9 +418,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
         mapa.fitBounds(lineaRuta.getBounds(), { padding:[25,25] });
         const horas = Math.floor(minutosRuta / 60), mins = Math.round(minutosRuta % 60);
         const duracion = horas ? `${horas} h ${mins} min` : `${mins} min`;
-        $('rutaInfo').textContent = `Ruta posible en automóvil: ${kmRut
-¿Necesitas ayuda?
-a.toFixed(1)} km · Tiempo estimado de conducción: ${duracion}. La ruta y el tiempo son referenciales.`;
+        $('rutaInfo').textContent = `Ruta posible en automóvil: ${kmRuta.toFixed(1)} km · Tiempo estimado de conducción: ${duracion}. La ruta y el tiempo son referenciales.`;
         $('distanciaResumen').textContent = `Distancia por carretera: ${kmRuta.toFixed(1)} km`;
         $('distanciaKm').value = `${kmRuta.toFixed(1)} km`;
         $('duracionRuta').value = duracion;
@@ -420,12 +433,21 @@ a.toFixed(1)} km · Tiempo estimado de conducción: ${duracion}. La ruta y el ti
       $('fechaRegreso').required = e.target.checked;
       if (!e.target.checked) $('fechaRegreso').value = '';
     });
-    $('fechaSalida').min = new Date().toISOString().slice(0,10);
+    $('fechaSalida').min = new Date(Date.now() - new Date().getTimezoneOffset()*60000).toISOString().slice(0,10);
     $('fechaSalida').addEventListener('change', () => { $('fechaRegreso').min = $('fechaSalida').value; });
+    function enlaceWhatsApp(texto) {
+      if (!WHATSAPP_FLOTA) return;
+      const a = document.createElement('a');
+      a.href = `https://wa.me/${WHATSAPP_FLOTA}?text=${encodeURIComponent(texto)}`;
+      a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'Enviar también por WhatsApp';
+      a.style.cssText = 'display:block;margin-top:8px;font-weight:700';
+      $('mensaje').appendChild(a);
+    }
     function mostrarMensaje(texto, tipo) { const m=$('mensaje'); m.textContent=texto; m.className=`mensaje ${tipo}`; }
 
     $('formCotizacion').addEventListener('submit', async (e) => {
       e.preventDefault();
+      await pendiente;
       if (!puntoOrigen || !puntoDestino) { mostrarMensaje('Selecciona la salida y la llegada en el mapa o escribe ambos lugares y selecciónalos en los resultados.', 'error'); return; }
       if (kmRuta === null) { mostrarMensaje('Aún no tenemos una ruta válida. Ajusta los puntos de salida y llegada en el mapa.', 'error'); return; }
       if ($('tieneRegreso').checked && $('fechaRegreso').value < $('fechaSalida').value) { mostrarMensaje('La fecha de regreso debe ser igual o posterior a la fecha de salida.', 'error'); return; }
@@ -435,20 +457,24 @@ a.toFixed(1)} km · Tiempo estimado de conducción: ${duracion}. La ruta y el ti
       datos.append('_template', 'table');
       datos.append('_captcha', 'false');
       datos.append('viaje_regreso', $('tieneRegreso').checked ? 'Sí' : 'No');
+      const textoWa = `Hola, solicito cotización:\n• Nombre: ${datos.get('nombre')}\n• Celular: ${datos.get('telefono')}\n• Desde: ${datos.get('origen')}\n• Hasta: ${datos.get('destino')}\n• Salida: ${datos.get('fecha_salida')}${$('tieneRegreso').checked ? ' | Regreso: ' + datos.get('fecha_regreso') : ''}\n• Pasajeros: ${datos.get('pasajeros')}\n• Distancia: ${datos.get('distancia_km')}`;
+      if (WEBHOOK_URL) fetch(WEBHOOK_URL, { method:'POST', mode:'no-cors', body:new URLSearchParams(datos) }).catch(() => {});
       try {
-        const respuesta = await fetch('https://formsubmit.co/ajax/supportadiuvat@gmail.com', { method:'POST', body:datos, headers:{'Accept':'application/json'} });
+        const respuesta = await fetch(`https://formsubmit.co/ajax/${soporteEmail}`, { method:'POST', body:datos, headers:{'Accept':'application/json'} });
         const resultado = await respuesta.json();
         if (!respuesta.ok || resultado.success === 'false') throw new Error(resultado.message || 'No se pudo enviar la solicitud.');
         mostrarMensaje('¡Solicitud enviada! El equipo de Flota Vehicular recibió tus datos y te responderá en máximo 1 hora. Puedes cerrar esta ventana.', 'ok');
+        enlaceWhatsApp(textoWa);
         e.target.reset(); puntoOrigen=null; puntoDestino=null; kmRuta=null; minutosRuta=null;
         $('distanciaResumen').textContent='Distancia por carretera: pendiente de calcular';
         $('distanciaKm').value=''; $('duracionRuta').value=''; $('coordenadasOrigen').value=''; $('coordenadasDestino').value='';
         if (marcadorOrigen) mapa.removeLayer(marcadorOrigen); if (marcadorDestino) mapa.removeLayer(marcadorDestino); if (lineaRuta) mapa.removeLayer(lineaRuta);
         marcadorOrigen=marcadorDestino=lineaRuta=null; $('bloqueRegreso').classList.remove('visible'); $('fechaRegreso').required=false;
       } catch (err) {
-        mostrarMensaje('No pudimos enviar la solicitud en este momento. Intenta nuevamente o escribe a soporteadiuvat@gmail.com. Detalle: '+err.message, 'error');
+        mostrarMensaje('No pudimos enviar la solicitud en este momento. Intenta nuevamente o escribe a '+soporteEmail+'. Detalle: '+err.message, 'error');
       } finally { boton.disabled=false; boton.textContent='Cotizar'; }
     });
+})();
   </script>
 
 				</div>
